@@ -82,10 +82,10 @@ let manha = 0
 let tarde = 0
 let noite = 0
 function questao5b(horas, min){
-    //DESNECESSÁRIO
+    //transformando tudo em minutos
     let minTotais = horas * 60 + min
-    while(minTotais<0 && minTotais>1440){
-        minTotais = prompt('TEMPO INVÁLIDO! Por favor, digite novamente.:')
+    if(minTotais > 1440){
+        minTotais = minTotais - 1440
     }
     if(minTotais >= 300 && minTotais < 720){
         manha+=1
